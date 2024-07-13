@@ -1,4 +1,5 @@
 return {
+    -- TODO: Add mason and mason-lspconfig as dependency of nvim-lspconfig and just configure there
     {
         "williamboman/mason.nvim",
         config = function()
@@ -11,7 +12,8 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "tsserver"
+                    "tsserver",
+                    "clangd"
                 }
             })
         end
@@ -22,6 +24,7 @@ return {
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup({})
             lspconfig.tsserver.setup({})
+            lspconfig.clangd.setup({})
         end
     }
 }

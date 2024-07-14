@@ -39,3 +39,12 @@ vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Find [H]elp Tags" 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {}) --already a default keybind by the nvimlsp but eh
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "[G]et [D]efinition" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
+
+-- Undotree bind
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = "Open [U]ndo Tree" })
+
+-- Git status keybind
+vim.keymap.set('n', '<leader>gs', vim.cmd.Git, { desc = "[G]it [S]tatus" })
+
+-- Enable Zen Mode
+vim.keymap.set("n", '<leader>z', vim.cmd.ZenMode, { desc = "Go in [Z]en Mode" })

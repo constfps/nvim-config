@@ -12,7 +12,8 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "tsserver",
-                    "clangd"
+                    "clangd",
+                    "cssls"
                 }
             })
         end
@@ -30,6 +31,9 @@ return {
                 capabilities = capabilities
             })
             lspconfig.clangd.setup({
+                capabilities = capabilities
+            })
+            lspconfig.cssls.setup({
                 capabilities = capabilities
             })
         end

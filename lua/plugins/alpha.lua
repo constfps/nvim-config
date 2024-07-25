@@ -1,4 +1,3 @@
-
 return {
     'goolord/alpha-nvim',
     dependencies = {
@@ -7,16 +6,8 @@ return {
 
     config = function()
         local alpha = require("alpha")
-        local dashboard = require("alpha.themes.startify")
+        local dashboard = require("alpha.themes.dashboard")
 
-        dashboard.section.header.val = {
-[[                                                               _   ____________ _    ________  ___]],
-[[                                                              / | / / ____/ __ \ |  / /  _/  |/  /]],
-[[                                                             /  |/ / __/ / / / / | / // // /|_/ / ]],
-[[                                                            / /|  / /___/ /_/ /| |/ // // /  / /  ]],
-[[                                                           /_/ |_/_____/\____/ |___/___/_/  /_/   ]],
-[[                                                                                                  ]],
-        }
         alpha.setup(dashboard.opts)
     end
 }

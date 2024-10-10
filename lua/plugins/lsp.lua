@@ -6,6 +6,9 @@ return {
         end
     },
     {
+        "nvim-java/nvim-java"
+    },
+    {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
@@ -13,7 +16,9 @@ return {
                     "lua_ls",
                     "ts_ls",
                     "clangd",
-                    "cssls"
+                    "cssls",
+                    "jdtls",
+                    "pylsp"
                 }
             })
         end
@@ -34,6 +39,12 @@ return {
                 capabilities = capabilities
             })
             lspconfig.cssls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.jdtls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.pylsp.setup({
                 capabilities = capabilities
             })
         end

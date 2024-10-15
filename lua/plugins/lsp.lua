@@ -18,7 +18,8 @@ return {
                     "clangd",
                     "cssls",
                     "jdtls",
-                    "pylsp"
+                    "pylsp",
+                    "bashls"
                 }
             })
         end
@@ -45,6 +46,9 @@ return {
                 capabilities = capabilities
             })
             lspconfig.pylsp.setup({
+                capabilities = capabilities
+            })
+            lspconfig.bashls.setup({
                 capabilities = capabilities
             })
         end
